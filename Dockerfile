@@ -9,5 +9,3 @@ ENV WEBHOOK_URL=https://n8n-free.onrender.com/
 ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
 EXPOSE 5678
-
-CMD ["/usr/local/bin/n8n"]

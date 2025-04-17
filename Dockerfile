@@ -1,16 +1,10 @@
 FROM docker.n8n.io/n8nio/n8n:latest
 
+# Copy custom startup script
 COPY start.sh /home/node/start.sh
 
-ENV N8N_BASIC_AUTH_ACTIVE=true
-ENV N8N_BASIC_AUTH_USER=admin
-ENV N8N_BASIC_AUTH_PASSWORD=supersecretpassword
-ENV N8N_HOST=0.0.0.0
-ENV DB_SQLITE_DATABASE=/tmp/database.sqlite
-ENV N8N_PATH=/
-
+# Set correct user (Render runs as non-root)
 USER node
 
-EXPOSE 5678
-
+# Use shell execution to avoid needing chmod
 CMD sh /home/node/start.sh

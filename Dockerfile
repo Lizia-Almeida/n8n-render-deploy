@@ -6,6 +6,7 @@ ENV N8N_BASIC_AUTH_PASSWORD=supersecretpassword
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 ENV WEBHOOK_URL=https://n8n-free.onrender.com/
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true  # ← Add this line
 
 EXPOSE 5678
 

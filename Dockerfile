@@ -1,7 +1,6 @@
 FROM docker.n8n.io/n8nio/n8n:latest
 
 COPY start.sh /home/node/start.sh
-RUN chmod +x /home/node/start.sh
 
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
@@ -14,4 +13,4 @@ USER node
 
 EXPOSE 5678
 
-CMD ["/home/node/start.sh"]
+CMD sh /home/node/start.sh

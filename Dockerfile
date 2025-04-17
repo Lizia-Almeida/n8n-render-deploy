@@ -7,7 +7,7 @@ ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=$PORT
 ENV WEBHOOK_URL=https://n8n-free.onrender.com/
 ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
-ENV DB_SQLITE_DATABASE=/data/database.sqlite
+ENV DB_SQLITE_DATABASE=/tmp/database.sqlite
 ENV N8N_PATH=/
 VOLUME /data
 
